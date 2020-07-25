@@ -10,14 +10,12 @@ export default class Bomb extends Component {
      }
     
     }
-    timer =()=>{
-       
-        secondsLeft === 0 ? "Bom!":"120 seconds left before I go boom!"
-    }
+    
     render() {
+        const message = this.state.secondsLeft === 0 ? 'Boom!' : `${this.state.secondsLeft} seconds left before I go boom!`;
         return (
             <div>
-                {this.timer}
+                {message}
             </div>
         )
     }
